@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .con {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .container,
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            background-color: #2d2d2d;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            width: 49%;
+            margin-bottom: 10px;
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #result {
+            margin-top: 10px;
+            background-color: #007acc;
+            width: 100%;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+
+        <h1>Calculator of 2 Numbers</h1>
+
+        <div class="container">
+            <div class="inputs">
+                <label for="num1">Num1
+                    <input type="number" id="num1">
+                </label>
+                <label for="num2">Num2
+                    <input type="number" id="num2">
+                </label>
+            </div>
+
+            <div class="butt">
+                <button id="add">Addition</button>
+                <button id="sub">Subtraction</button>
+                <button id="mul">Multiplication</button>
+                <button id="div">Division</button>
+                <button id="mod">Modulus</button>
+                <button id="power">Power</button>
+            </div>
+        </div>
+
+        <div id="result">Result</div>
+
+    </div>
+
+    <script>
+        const num1 = document.querySelector("#num1");
+        const num2 = document.querySelector("#num2");
+        const result = document.querySelector("#result");
+
+        document.querySelector("#add").addEventListener("click", () => {
+            result.innerHTML = `(${num1.value}) + (${num2.value}) = ${Number(num1.value) + Number(num2.value)}`;
+        });
+
+        document.querySelector("#sub").addEventListener("click", () => {
+            result.innerHTML = `(${num1.value}) - (${num2.value}) = ${Number(num1.value) - Number(num2.value)}`;
+        });
+
+        document.querySelector("#mul").addEventListener("click", () => {
+            result.innerHTML = `(${num1.value}) * (${num2.value}) = ${Number(num1.value) * Number(num2.value)}`;
+        });
+
+        document.querySelector("#div").addEventListener("click", () => {
+            result.innerHTML = `(${num1.value}) / (${num2.value}) = ${Number(num1.value) / Number(num2.value)}`;
+        });
+
+        document.querySelector("#mod").addEventListener("click", () => {
+            result.innerHTML = `(${num1.value}) % (${num2.value}) = ${Number(num1.value) % Number(num2.value)}`;
+        });
+
+        document.querySelector("#power").addEventListener("click", () => {
+            result.innerHTML = `(${num1.value}) ** (${num2.value}) = ${Number(num1.value) ** Number(num2.value)}`;
+        });
+    </script>
+
+</html>
