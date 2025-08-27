@@ -1,4 +1,21 @@
-# Calculator-for-two-values
-this calculator which takes two values as input and performs operations on it.
+# 2-Input Calculator
 
-It is simple yet and I will keep adding things to it as time passes!
+A simple **2-input calculator** built with **HTML, CSS, and JavaScript**. Supports basic operations and handles errors gracefully.
+
+## Features
+
+* Add, Subtract, Multiply, Divide, Modulo, Power
+* Handles errors: empty input, non-numeric input, divide/mod by zero, 0^0
+
+## Usage
+
+1. Enter two numbers.
+2. Click an operation button.
+3. View the result or error message.
+
+## Technologies
+
+* HTML
+* CSS
+* JavaScript
+
